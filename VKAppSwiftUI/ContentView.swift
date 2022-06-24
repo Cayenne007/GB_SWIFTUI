@@ -13,39 +13,38 @@ struct ContentView: View {
     @State var password = ""
     
     var body: some View {
-        ZStack {
-            
-            VStack {
-                LinearGradient(
-                    colors: [.red, .blue, .green, .yellow],
-                    startPoint: .leading,
-                    endPoint: .trailing
-                )
-                .mask  {
-                    Text("VK APP")
-                        .font(Font.system(size: 46, weight: .bold))
-                                .multilineTextAlignment(.center)
-                }
-                .frame(height: 100)
-                TextField("Логин", text: $login)
-                TextField("Пароль", text: $password)
-                Button("Войти") {
-                    logIn()
-                }
-                .frame(maxWidth: 200)
-                .buttonStyle(.borderedProminent)
-                
+        
+        VStack {
+            LinearGradient(
+                colors: [.red, .blue, .green, .yellow],
+                startPoint: .leading,
+                endPoint: .trailing
+            )
+            .mask  {
+                Text("VK APP")
+                    .font(Font.system(size: 46, weight: .bold))
+                    .multilineTextAlignment(.center)
             }
-            .padding()
-            .textFieldStyle(.roundedBorder)
+            .frame(height: 100)
+            TextField("Логин", text: $login)
+            TextField("Пароль", text: $password)
+            Button("Войти") {
+                logIn()
+            }
+            .frame(maxWidth: 200)
+            .buttonStyle(.borderedProminent)
+            
         }
+        .padding()
+        .textFieldStyle(.roundedBorder)
+        
     }
     
 }
 
 extension ContentView {
     func logIn() {
-        print("login")
+        print("login §")
     }
 }
 
