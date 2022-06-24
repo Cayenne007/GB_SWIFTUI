@@ -45,7 +45,7 @@ struct ContentView: View {
 
 extension ContentView {
     func logIn() {
-        
+        print("login")
     }
 }
 
